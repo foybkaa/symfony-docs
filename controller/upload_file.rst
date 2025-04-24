@@ -240,6 +240,7 @@ logic to a separate service::
     class FileUploader
     {
         public function __construct(
+            #[Autowire('%brochures_directory%')] 
             private string $targetDirectory,
             private SluggerInterface $slugger,
         ) {
